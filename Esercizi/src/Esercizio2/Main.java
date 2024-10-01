@@ -27,19 +27,20 @@ public class Main {
         System.out.println("Vuoi stampare i numeri in posizione pari (1) o dispari (2)");
         int option;
         while (true){
-            String scelta = sc.nextLine();
+            String input = sc.nextLine();
             try {
-                option = Integer.parseInt(scelta);
+                option = Integer.parseInt(input);
                 if(option <= 0 || option > 2) System.out.println("Devi inserire 1 o 2");
                 else break;
             } catch (NumberFormatException e){
                 System.out.println("Devi inserire un numero");
             }
         }
-        boolean scelta = option == 1;
-        System.out.println("L'array di numeri in posizione " + (scelta ? "pari" : "dispari") + " è: ");
-        System.out.println(evenOdd(randoms, scelta));
+        boolean boolOption = option == 1;
+        System.out.println("L'array di numeri in posizione " + (boolOption ? "pari" : "dispari") + " è: ");
+        System.out.println(evenOdd(randoms, boolOption));
     }
+
     public static ArrayList<Integer> arrayRandom(int n){
         ArrayList<Integer> randoms = new ArrayList<>();
         for (int i = 0; i < n; i++) {
