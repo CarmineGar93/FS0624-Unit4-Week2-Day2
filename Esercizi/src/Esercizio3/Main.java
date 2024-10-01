@@ -47,12 +47,14 @@ public class Main {
                     System.out.println("Inserisci il nome del contatto da cercare");
                     String nome = sc.nextLine();
                     String numero = Rubrica.searchPerson(nome);
-                    System.out.println("Il numero della persona cercata è: " + numero);
+                    if(numero.equals("Nessun risultato")) System.out.println(numero);
+                    else System.out.println("Il numero della persona cercata è: " + numero);
                 }
                 case 4 -> {
                     System.out.println("Inserisci il numero del contatto da cercare");
                     String numero = sc.nextLine();
                     String nome = Rubrica.searchNumber(numero);
+                    if(nome.equals("Nessun risultato")) System.out.println(nome);
                     System.out.println("Il nome del numero cercato è: " + nome);
                 }
                 case 5 -> {

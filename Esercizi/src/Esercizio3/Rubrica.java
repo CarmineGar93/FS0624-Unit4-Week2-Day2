@@ -15,7 +15,8 @@ public abstract class Rubrica {
     }
 
     public static String searchPerson(String nome){
-        return rubrica.get(nome);
+        if(rubrica.get(nome) == null) return "Nessun risultato";
+        else return rubrica.get(nome);
     }
 
     public static String searchNumber(String nr){
