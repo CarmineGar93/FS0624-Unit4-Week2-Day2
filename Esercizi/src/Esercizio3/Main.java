@@ -34,7 +34,7 @@ public class Main {
                     String nome = sc.nextLine();
                     System.out.println("Inserisci il numero del contatto");
                     String numero = sc.nextLine();
-                    Rubrica.aggiungi(nome, numero);
+                    Rubrica.add(nome, numero);
                     System.out.println("Contatto salvato");
                 }
                 case 2 -> {

@@ -6,7 +6,7 @@ import java.util.Set;
 public abstract class Rubrica {
     private static HashMap<String, String> rubrica = new HashMap<>();
 
-    public static void aggiungi(String nome, String nr){
+    public static void add(String nome, String nr){
         rubrica.put(nome, nr);
     }
 
